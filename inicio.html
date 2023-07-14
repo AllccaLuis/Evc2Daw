@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluacion Continua 2 - Inicio</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/689993236/es/foto/tinta-de-colores-en-el-agua.jpg?s=612x612&w=0&k=20&c=uf7gjV2FOfJfWZ1BOugEDeEsRRbJ8xZQovB0gu-O7XY=');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: white;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 100px;
+            max-width: 500px;
+        }
+        
+        .form-group label {
+            color: white;
+        }
+        
+        .form-group input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            border-radius: 10px; 
+        }
+
+        .form-group input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 10px; 
+        }
+        
+        .form-group .valid-feedback, .form-group .invalid-feedback {
+            display: none;
+        }
+        
+        .btn-primary {
+            background-color: orange;
+            color: white; 
+            border-radius: 10px; 
+            border: none
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: rgb(255, 123, 0);
+            color: white; 
+        }
+
+        .btn-secondary {
+            background-color:  red;
+            color: white; 
+            border-radius: 10px; 
+            border: none
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background-color:  rgb(255, 0, 64); 
+            color: white; 
+            border: none
+        }
+        
+        .title {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        #imagenPre {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        .corner-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
+        
+        .corner-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Evaluacion Continua 2 - Inicio</h1>
+        <div class="corner-button">
+            <a href="fin.html">Pagina 2 - click</a>
+        </div>
+        <form id="clienteForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" class="form-control">
+                <div class="valid-feedback">Campo válido.</div>
+                <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" class="form-control">
+                <div class="valid-feedback">Campo válido.</div>
+                <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" class="form-control">
+                <div class="valid-feedback">Campo válido.</div>
+                <div class="invalid-feedback">Por favor, ingrese un correo válido.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" class="form-control">
+                <div class="valid-feedback">Campo válido.</div>
+                <div class="invalid-feedback">Por favor, ingrese su fecha de nacimiento.</div>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="imagen">URL de la Imagen:</label>
+                <input type="text" id="urlImagen" class="form-control" oninput="mostrarImagen(this.value)">
+                <div class="valid-feedback">Campo válido.</div>
+                <div class="invalid-feedback">Por favor, ingrese una URL válida.</div>
+                <br>
+                <img id="imagenPre" src="https://1.bp.blogspot.com/_vrSyhLoesHU/TPkHq0hmdOI/AAAAAAAABR8/zbsB-WWhf4g/s1600/cargao.gif" alt="Imagen">
+            </div>
+
+            <button type="submit" class="btn btn-outline-dark btn-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                  </svg>
+                Enviar
+            </button>
+
+            <button type="reset" class="btn btn-outline-dark btn-light" onclick="limpiarFormulario()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                </svg>
+                Borrar
+            </button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

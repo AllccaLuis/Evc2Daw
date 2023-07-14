@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluacion Continua 2 - Fin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/40/ab/84/40ab8469396d0e76483b56812aad6c84.gif');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: white;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 150px;
+            width: 900px; /* Ajustar la anchura según sea necesario */
+            height: 325px; /* Ajustar la altura según sea necesario */
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            overflow-wrap: break-word;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-button {
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .custom-button i {
+            margin-right: 5px;
+        }
+
+        .btn-rojo {
+            background-color: red;
+        }
+
+        .btn-azul {
+            background-color: blue;
+        }
+
+        .btn-verde {
+            background-color: green;
+        }
+
+        .btn-naranja {
+            background-color: orange;
+        }
+
+        .btn-extra {
+            background-color: rgba(255, 0, 255, 0.8);
+        }
+
+        .btn-rojo:hover, .btn-azul:hover, .btn-verde:hover, .btn-naranja:hover, .btn-extra:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .corner-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
+        
+        .corner-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Evaluacion Continua 2 - Fin</h1><br><br>
+        <div class="corner-button">
+            <a href="inicio.html">Pagina 1 - click</a>
+        </div>
+        <div class="button-container">
+            <button id="btnRojo" class="btn btn-outline-dark btn-light"><i class="bi bi-circle"></i>  Rojo  </button>
+            <button id="btnAzul" class="btn btn-outline-dark btn-light"><i class="bi bi-circle"></i>  Azul  </button>
+            <button id="btnVerde" class="btn btn-outline-dark btn-light"><i class="bi bi-circle"></i>  Verde  </button>
+            <button id="btnNaranja" class="btn btn-outline-dark btn-light"><i class="bi bi-circle"></i>  Naranja  </button>
+            <button id="btnExtra" class="btn btn-outline-dark btn-light"><i class="bi bi-circle"></i>  Botón rgb  </button>
+        </div>
+        <br><br>
+        <input type="text" id="cajaTexto" class="form-control" placeholder="Escriba aquí">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
